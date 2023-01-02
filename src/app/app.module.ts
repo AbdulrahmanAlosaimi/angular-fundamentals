@@ -3,16 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { ProductItemDetailComponent } from './components/product-item-detail/product-item-detail.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductListComponent,
+    HeaderComponent,
+    CartComponent,
+    ConfirmationComponent,
+    ProductItemDetailComponent,
+    ProductItemComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
