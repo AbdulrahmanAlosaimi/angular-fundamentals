@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 import { CartService } from 'src/app/services/cart/cart.service';
 
@@ -7,13 +7,14 @@ import { CartService } from 'src/app/services/cart/cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
   userProducts: Product[] = [];
 
   constructor(private cartService: CartService) {}
 
-  addToCart(product: Product): Product[] {
-    this.userProducts = this.cartService.addToCart(product);
-    return this.userProducts;
+  ngOnInit(): void {
+    this.userProducts = this.cartService.getUserProducts();
+
+    console.log(`in cart comp`, this.userProducts);
   }
 }

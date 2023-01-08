@@ -4,6 +4,8 @@ img {
 }
 
 .form-margin {
+  float: right;
+  margin-right: 25% !important;
   margin-bottom: 12px;
 }
 
@@ -27,6 +29,8 @@ img {
 }
 
 .cart-container {
+  padding-left: 25%;
+  float: left;
   display: flex;
   flex-direction: row;
   justify-content: center;
