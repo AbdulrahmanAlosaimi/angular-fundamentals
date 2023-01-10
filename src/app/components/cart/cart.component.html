@@ -1,16 +1,16 @@
 <div class="cart-container">
     <div class="cart-panel">
-        <div class="cart-item" *ngFor="let product of userProducts">
-            <img src={{product.url}} alt="">
+        <div class="cart-item" *ngFor="let object of userProducts">
+            <img src={{object.product.url}} alt="">
             <div class="cart-item-details">
-                <p><strong>{{product.name}}</strong></p>
-                <p>${{product.price}}</p>
+                <p><strong>{{object.product.name}}</strong></p>
+                <p>${{object.product.price}}</p>
                 <p>Amount </p>
-                <input type="number" name="" id="" class="number-input">
+                <input type="number" name="" id="" class="number-input" value={{object.quantity}}>
             </div>
         </div>
+        <h1>Total: ${{totalPrice}}</h1>
     </div>
     <div class="cart-panel form-margin">
-        <p>test</p>
     </div>
 </div>

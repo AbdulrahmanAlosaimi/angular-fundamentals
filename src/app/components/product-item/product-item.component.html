@@ -2,8 +2,8 @@
     <h1 routerLink="products/{{product.id}}">{{product.name}}</h1>
     <img src={{product.url}} alt="" class="product-img" routerLink="products/{{product.id}}">
     <h4>${{product.price}}</h4>
-    <select name="quantity" id="quantity" class="select-input">
-        <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" value=[i]>{{i}}</option>
+    <select name="quantity" id="quantity" class="select-input" [(ngModel)]="quantity">
+        <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" value=[i] [value]="[i]">{{i}}</option>
     </select>
-    <button class="add-cart" (click)="added.emit(product)">Add to cart</button>
+    <button class="add-cart" (click)="addToCart({product: product, quantity: quantity})">Add to cart</button>
 </div>

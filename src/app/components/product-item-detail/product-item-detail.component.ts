@@ -13,6 +13,7 @@ import { CartService } from 'src/app/services/cart/cart.service';
 export class ProductItemDetailComponent implements OnInit {
   product: Product = new Product();
   private routeSub: Subscription = new Subscription();
+  quantity: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +31,11 @@ export class ProductItemDetailComponent implements OnInit {
     this.routeSub.unsubscribe();
   }
 
-  addToCart(product: Product): void {
-    console.log(this.cartService.addToCart(product));
+  addToCart(object: any) {
+    if (object.quantity == 0) {
+      alert('Please select a quantity');
+      return;
+    }
+    return this.cartService.addToCart(object);
   }
 }
