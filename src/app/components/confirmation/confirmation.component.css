@@ -1,6 +1,7 @@
 .confirmation-container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   margin-top: 8%;
 }
@@ -17,4 +18,16 @@
 
 .confirmation-item {
   margin-bottom: 30px;
+}
+
+button {
+  background-color: #33b5e5;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2ea3cd;
 }

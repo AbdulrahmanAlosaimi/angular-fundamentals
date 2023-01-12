@@ -11,6 +11,7 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     ConfirmationComponent,
     ProductItemDetailComponent,
     ProductItemComponent,
+    UserFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

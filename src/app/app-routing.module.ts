@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent,
   },
+  {
+    path: 'confirmation',
+    component: ConfirmationComponent,
+  },
 ];
 
 @NgModule({

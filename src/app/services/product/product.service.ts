@@ -21,4 +21,8 @@ export class ProductService {
   getProduct(id: number): Product {
     return this.products.find((product) => product.id === id) as Product;
   }
+
+  resetProducts(): void {
+    this.products = [];
+  }
 }

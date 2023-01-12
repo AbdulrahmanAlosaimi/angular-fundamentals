@@ -1,0 +1,17 @@
+<form #form="ngForm" (ngSubmit)="addOrder.emit(user)">
+    <label for="name">Full name
+    </label>
+    <br>
+    <input type="text" name="=fullName" placeholder="(minimum 3 characters)" required minlength="3"
+        [(ngModel)]="user.fullName">
+    <label for="address">Address
+    </label><br>
+    <input type="text" name="address" placeholder="(minimum 6 characters)" required minlength="6"
+        [(ngModel)]="user.address">
+    <label for="credit-card">Credit card number
+    </label><br>
+    <input type="text" name="creditCard" placeholder="(16-digit number)" required minlength="16" maxlength="16"
+        [(ngModel)]="user.creditCard">
+    <p>We'll never share your payment details with anyone else.</p>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

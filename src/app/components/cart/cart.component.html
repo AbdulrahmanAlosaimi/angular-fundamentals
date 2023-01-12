@@ -6,11 +6,13 @@
                 <p><strong>{{object.product.name}}</strong></p>
                 <p>${{object.product.price}}</p>
                 <p>Amount </p>
-                <input type="number" name="" id="" class="number-input" value={{object.quantity}}>
+                <input type="number" name="" id="" class="number-input" value={{object.quantity}}
+                    [(ngModel)]="object.quantity" (ngModelChange)="quantityChanged($event, object)">
             </div>
         </div>
         <h1>Total: ${{totalPrice}}</h1>
     </div>
     <div class="cart-panel form-margin">
+        <app-user-form (addOrder)="addOrder($event)"></app-user-form>
     </div>
 </div>

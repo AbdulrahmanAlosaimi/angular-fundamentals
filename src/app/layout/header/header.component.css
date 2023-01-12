@@ -1,9 +1,17 @@
-.header {
+.links {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   background: #33b5e5;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  background: #33b5e5;
+  display: flex;
+  flex-direction: column;
   color: #fff;
   padding: 12px;
   padding-left: 40%;
@@ -12,4 +20,9 @@
 
 a {
   color: #ffffff;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: x-large;
 }

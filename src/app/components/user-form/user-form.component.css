@@ -1,0 +1,27 @@
+input {
+  margin: 5%;
+}
+
+button {
+  background-color: #33b5e5;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2ea3cd;
+}
+
+p {
+  font-size: x-small;
+  opacity: 0.5;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+button:disabled:hover {
+  background-color: #33b5e5;
+}
