@@ -25,3 +25,9 @@ button:disabled {
 button:disabled:hover {
   background-color: #33b5e5;
 }
+
+.error {
+  color: red;
+  font-size: xx-small;
+  padding-bottom: 5%;
+}

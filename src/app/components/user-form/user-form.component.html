@@ -2,16 +2,27 @@
     <label for="name">Full name
     </label>
     <br>
-    <input type="text" name="=fullName" placeholder="(minimum 3 characters)" required minlength="3"
-        [(ngModel)]="user.fullName">
+    <input type="text" name="fullName" placeholder="(minimum 3 characters)" required minlength="3"
+        [(ngModel)]="user.fullName" #fullName="ngModel">
+    <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="error">
+        Please make sure to enter a name that is atleast 3 characters long
+    </div>
     <label for="address">Address
     </label><br>
     <input type="text" name="address" placeholder="(minimum 6 characters)" required minlength="6"
-        [(ngModel)]="user.address">
-    <label for="credit-card">Credit card number
-    </label><br>
+        [(ngModel)]="user.address" #address="ngModel">
+    <div *ngIf="address.invalid && (address.dirty || address.touched)" class="error">
+        Please make sure to enter an address that is atleast 3 characters long
+    </div>
+    <label for="credit-card">Credit card </label><br>
     <input type="text" name="creditCard" placeholder="(16-digit number)" required minlength="16" maxlength="16"
-        [(ngModel)]="user.creditCard">
+        [(ngModel)]="user.creditCard" #creditCard="ngModel" (input)="validateCreditCard($event)">
+    <div *ngIf="creditCard.invalid && (creditCard.dirty || creditCard.touched)" class="error">
+        Please make sure your credit card number is 16 digits long and only contains numeric characters
+    </div>
+
     <p>We'll never share your payment details with anyone else.</p>
     <button type="submit" [disabled]="form.invalid">Submit</button>
+
+
 </form>
