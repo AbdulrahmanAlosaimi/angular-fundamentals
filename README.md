@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+## Description
+
+This is a single-page Angular project that simulates a products selling store. You can browse the site to view the list of available products, and seeing extra details about the product when clicked on. You can add items to your cart and proceed to checkout, in the cart you'll be asked to supply personal information that is required to complete the order. Upon filling out the cart information successfully, you will be a show a successfull checkout message.
+
 ## Dependencies
 
 Make sure to clone the project
